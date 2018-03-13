@@ -207,6 +207,35 @@ img#headerLge {
     }
   }
 
+  /* LIGHTNING FLASH */
+
+  @keyframes lightning{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    11%{
+        opacity: 1;
+    }
+    14%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    21%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
+
 }
 
 
