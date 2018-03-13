@@ -122,10 +122,16 @@ img#headerLge {
 
 /* Devices 576px and up) */
 @media (min-width: 576px) {
-  #moon {
+  #moon,
+  #stars {
     position: absolute;
     /* uncomment when developing */
     /* z-index: 30; */
+  }
+
+  #stars {
+    top: 200px;
+    left: 0;
   }
 }
 
