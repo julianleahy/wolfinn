@@ -120,6 +120,25 @@ img#headerLge {
 
 }
 
+/* Devices 576px and up) */
+@media (min-width: 576px) {
+  #moon {
+    position: absolute;
+    /* uncomment when developing */
+    /* z-index: 30; */
+  }
+}
+
+
+/* Devices 1200px and up) */
+@media (min-width: 1200px) {
+  #moon{
+    top: 680px;
+    left: 520px;
+  }
+}
+
+
 
 /* RAIN EFFECTS */
 
