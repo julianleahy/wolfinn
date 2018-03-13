@@ -124,7 +124,8 @@ img#headerLge {
 @media (min-width: 576px) {
   #moon,
   #stars,
-  #strike {
+  #strike,
+  #shooting {
     position: absolute;
     /* uncomment when developing */
     /* z-index: 30; */
@@ -144,6 +145,11 @@ img#headerLge {
     left: 520px;
   }
 
+  #shooting{
+    top: 375px;
+    left: 1070px;
+  }
+
   /* LIGHTNING STRIKE */
 
   #strike{
@@ -153,6 +159,7 @@ img#headerLge {
     z-index: 100;
   }
 
+  
   @keyframes strike {
     0%{
         opacity:1;
