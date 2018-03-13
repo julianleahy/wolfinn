@@ -23,34 +23,40 @@
 
   <div class="wrapper">
     <header>
-      <img src="./images/header_lge.png" alt="Lone Wolf Cafe" id="headerLge">
+      <div class="mobileHeader"></div>
 
-      <div class="nightEffects">
-        <!-- moon rising -->
-        <section id="moon"
-            data-0="transform:translate(0%, 0%)"
-            data-600="transform:translate(50%, -60%)">
-          <img src="./images/moon.png" alt="Lone Wolf Cafe | moon">
+      <div class="noMobile">
+        <img src="./images/header_lge.png" alt="Lone Wolf Cafe" id="headerLge">
+        <img src="./images/header_med.png" alt="Lone Wolf Cafe" id="headerMed">
+  
+  
+        <div class="nightEffects">
+          <!-- moon rising -->
+          <section id="moon"
+              data-0="transform:translate(0%, 0%)"
+              data-600="transform:translate(50%, -60%)">
+            <img src="./images/moon.png" alt="Lone Wolf Cafe | moon">
+          </section>
+          <!-- stars twinkle -->
+          <section id="stars"
+              data-0="opacity:0"
+              data-600="opacity:1">
+            <img src="./images/stars.png" alt="Lone Wolf Cafe | stars">
+          </section>
+          <!-- lightning strike -->
+          <section id="strike">
+            <img src="./images/strike.png" alt="Lone Wolf Cafe | strike">
+          </section>
+          <!-- shooting star -->
+          <section id="shooting"
+              data-150="transform:translate(0%, 0%); opacity:1"
+              data-300="transform:translate(500%, -100%); opacity:0">
+            <img src="./images/shooting-star.png" alt="Lone Wolf Cafe | shooting star">
         </section>
-        <!-- stars twinkle -->
-        <section id="stars"
-            data-0="opacity:0"
-            data-600="opacity:1">
-          <img src="./images/stars.png" alt="Lone Wolf Cafe | stars">
-        </section>
-        <!-- lightning strike -->
-        <section id="strike">
-          <img src="./images/strike.png" alt="Lone Wolf Cafe | strike">
-        </section>
-        <!-- shooting star -->
-        <section id="shooting"
-            data-150="transform:translate(0%, 0%); opacity:1"
-            data-300="transform:translate(500%, -100%); opacity:0">
-          <img src="./images/shooting-star.png" alt="Lone Wolf Cafe | shooting star">
-      </section>
+        </div>
+  
+        <div class="rain"></div>
       </div>
-
-      <div class="rain"></div>
     </header>
     <section id="title"
         data-0="opacity:0; transform: scale(0.5)"

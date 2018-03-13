@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Butcherman');
+@import url("https://fonts.googleapis.com/css?family=Butcherman");
+
 /*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
 
 /*
@@ -99,173 +100,212 @@ textarea {
    ========================================================================== */
 
 body {
-  background-color: #2f122e;
+    background-color: #2f122e;
 }
 
 header {
-  position: relative;
-  top: 0;
-  left: 0;
-  margin: 0 auto;
-  width: 100%;
-  background-color: rgb(0, 0, 0);
-  overflow: hidden;
-  padding-top: 250px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    padding-top: 0px;
 }
 
-img#headerLge {
-  position: relative;
-  top:0;
-  left: 0;
-  z-index: 20;
-
+.mobileHeader{
+  height: 261px;
+  max-height: 261px;
+  background: url('./../images/header_mob.png') 50% 50% no-repeat;
+  display: block;
 }
+
+.noMobile{ display: none}
+
 
 #title h1 {
-  font: 90px 'Butcherman', cursive;
-  color: #fff;
-  text-align: center;
+    position: absolute;
+    left: 50%;
+    top:-50px;
+    transform: translateX(-50%);
+    font: 90px 'Butcherman', cursive;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    
 }
 
 /* Devices 576px and up) */
 @media (min-width: 576px) {
-  #moon,
-  #stars,
-  #strike,
-  #shooting {
-    position: absolute;
-    /* uncomment when developing */
-    /* z-index: 30; */
-  }
+    #headerLge,
+    .mobileHeader {
+        display: none;
+    }
 
-  #stars {
-    top: 200px;
-    left: 0;
-  }
+    #headerMed,
+    .noMobile {
+        display: block;
+    }
+
+    header { padding-top: 250px }
+
+    #headerLge,
+    #headerMed {
+      position: relative;
+      top:0;
+      left: 0;
+      z-index: 20;
+    }
+
+
+    #moon,
+    #stars,
+    #strike,
+    #shooting {
+        position: absolute;
+
+        /* uncomment when developing */
+        /* z-index: 30; */
+    }
+
+    #moon {
+        top: 600px;
+        left: 480px;
+    }
+
+    #stars {
+        top: 200px;
+        left: 0;
+    }
+
+    #shooting {
+        top: 290px;
+        left: 1030px;
+    }
+
+    /* RAIN EFFECTS */
+
+    .rain {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 1000px;
+        background: url("./../images/rain.png");
+        animation: rain .3s linear infinite;
+    }
+
+    .rain:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 800px;
+        background: #fff;
+        opacity: 0;
+        animation: lightning 4s linear infinite;
+    }
 }
-
 
 /* Devices 1200px and up) */
 @media (min-width: 1200px) {
-  #moon{
-    top: 680px;
-    left: 520px;
-  }
+    #headerLge {
+        display: block;
+    }
 
-  #shooting{
-    top: 375px;
-    left: 1070px;
-  }
+    #headerMed {
+        display: none;
+    }
 
-  /* LIGHTNING STRIKE */
+    #moon {
+        top: 680px;
+        left: 520px;
+    }
 
-  #strike{
-    top: 292px;
-    left: 1021px;
-    animation: strike 7s linear infinite;
-    z-index: 100;
-  }
+    #shooting {
+        top: 375px;
+        left: 1070px;
+    }
 
-  
-  @keyframes strike {
-    0%{
-        opacity:1;
-    }
-    1%{
-        opacity:0;
-    }
-    5%{
-        opacity:1;
-    }
-    6%{
-        opacity:0;
-    }
-    100%{
-        opacity: 0;
-    }
-  }
+    /* LIGHTNING STRIKE */
 
-
-
-
-  /* RAIN EFFECTS */
-
-  .rain{
-    position: absolute;
-    top: 0%;
-    left:0%;
-    width: 100%;
-    height: 1000px;
-    background: url('./../images/rain.png');
-    animation: rain .3s linear infinite;
-  }
-
-  .rain:before {
-    position: absolute;
-    content: '';
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 800px;
-    background: #fff;
-    opacity: 0;
-    animation: lightning 4s linear infinite;
-  }
-
-  @keyframes rain{
-    0%{
-        background-position: 0% 0%;
+    #strike {
+        top: 292px;
+        left: 1021px;
+        animation: strike 7s linear infinite;
+        z-index: 100;
     }
-    100%{
-        background-position: 20% 100%;
-    }
-  }
-
-  /* LIGHTNING FLASH */
-
-  @keyframes lightning{
-    0%{
-        opacity: 0;
-    }
-    10%{
-        opacity: 0;
-    }
-    11%{
-        opacity: 1;
-    }
-    14%{
-        opacity: 0;
-    }
-    20%{
-        opacity: 0;
-    }
-    21%{
-        opacity: 1;
-    }
-    30%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 0;
-    }
-  }
-
 }
 
+@keyframes strike {
+    0% {
+        opacity: 1;
+    }
 
+    1% {
+        opacity: 0;
+    }
 
+    5% {
+        opacity: 1;
+    }
 
+    6% {
+        opacity: 0;
+    }
 
+    100% {
+        opacity: 0;
+    }
+}
 
+@keyframes rain {
+    0% {
+        background-position: 0% 0%;
+    }
 
+    100% {
+        background-position: 20% 100%;
+    }
+}
 
+/* LIGHTNING FLASH */
 
+@keyframes lightning {
+    0% {
+        opacity: 0;
+    }
 
+    10% {
+        opacity: 0;
+    }
 
+    11% {
+        opacity: 1;
+    }
 
+    14% {
+        opacity: 0;
+    }
 
+    20% {
+        opacity: 0;
+    }
 
+    21% {
+        opacity: 1;
+    }
 
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
 
 /* ==========================================================================
    Helper classes
@@ -357,10 +397,7 @@ img#headerLge {
     /* Style adjustments for viewports that meet the condition */
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -407,6 +444,7 @@ img#headerLge {
     pre {
         white-space: pre-wrap !important;
     }
+
     pre,
     blockquote {
         border: 1px solid #999;
